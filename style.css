@@ -10,9 +10,23 @@ body {
     font-family: monospace;
 }
 
+::-webkit-scrollbar{
+    height: 0;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track{
+    background: grey;
+}
+
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 5rem;
+}
+
 nav {
     background-image: linear-gradient(135deg, rgba(107, 107, 107,0.06) 0%, rgba(107, 107, 107,0.06) 50%,rgba(202, 202, 202,0.06) 50%, rgba(202, 202, 202,0.06) 100%),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20)); background-size: 30px 30px;
-    height: 80px;
+    height: 82px;
     width: 100%;
 }
 
@@ -65,12 +79,35 @@ a.active, a:hover {
     display:none;
 }
 
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#home .home-image img{
+    transition-duration: 1s;
+      border-radius: 15px;
+      display: block;
+      margin: 100px auto 40px;
+      width: 90%;
+      height: 100%;
+}
+
+.introduction p{
+    padding: 0 45px 0 45px;
+    font-size: 20px;
+}
+
 
 
 
 
 
 @media (max-width: 768px) {
+
+    /*navbar in responvise screen*/
 
     label.logo {
         padding-left: 20px;
@@ -100,7 +137,7 @@ a.active, a:hover {
         transition: all .5s;
     }
 
-    nav ul.show {
+    nav ul {
         display: block;
     }
 
@@ -124,5 +161,34 @@ a.active, a:hover {
     #check:checked ~ ul {
         left: 0;
     }
+
+     .checkbtn i.fa-times {
+        display: none;
+    }
+
+    #check:checked + .checkbtn i.fa-bars {
+        display: none;
+    }
+
+    #check:checked + .checkbtn i.fa-times {
+        display: inline-block;
+    }
+
+    /*home image*/
+
+    #home .home-image img{
+        transition-duration: 0.5s;
+          border-radius: 15px;
+          display: block;
+          margin: 70px auto 25px;
+          width: 90%;
+          height: 100%;
+    }
+
+    .introduction p{
+        padding: 0 10px 0 20px;
+        font-size: 14px;
+    }
+
 
 }
