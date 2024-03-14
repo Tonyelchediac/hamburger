@@ -8,6 +8,7 @@
 
 body {
     font-family: monospace;
+    background-image: repeating-radial-gradient(circle at center center, transparent 0px, transparent 2px,rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 3px,transparent 3px, transparent 5px,rgba(0,0,0,0.03) 5px, rgba(0,0,0,0.03) 7px),repeating-radial-gradient(circle at center center, rgb(255,255,255) 0px, rgb(255,255,255) 9px,rgb(255,255,255) 9px, rgb(255,255,255) 21px,rgb(255,255,255) 21px, rgb(255,255,255) 31px,rgb(255,255,255) 31px, rgb(255,255,255) 40px); background-size: 20px 20px;
 }
 
 ::-webkit-scrollbar{
@@ -75,6 +76,10 @@ a.active, a:hover {
     display: none;
 }
 
+.comunication{
+    display: none;
+}
+
 #check{
     display:none;
 }
@@ -119,6 +124,20 @@ header{
         display: block;
         line-height: 50px;
         font-size: 25px;
+    }
+
+    .comunication {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 80px;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 19px;
+    }
+
+    li .callus-display{
+        display: none;
     }
 
     nav {
@@ -192,4 +211,18 @@ header{
     }
 
 
+    footer {
+        background-image: linear-gradient(135deg, rgba(107, 107, 107,0.06) 0%, rgba(107, 107, 107,0.06) 50%, rgba(202, 202, 202,0.06) 50%, rgba(202, 202, 202,0.06) 100%), linear-gradient(90deg, rgb(20,20,20), rgb(20,20,20));
+        color: white;
+        font-size: 12px;
+        padding: 1.5rem 10%;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }
